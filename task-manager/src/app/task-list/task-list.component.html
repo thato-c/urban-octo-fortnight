@@ -4,7 +4,7 @@
         <li *ngFor="let task of tasks">
             <h3>{{ task.title }}</h3>
             <p>{{ task.description }}</p>
-            <button>Delete</button>
+            <button (click)="editTask.emit(task)">Edit</button>
         </li>
     </ul>
 </div>

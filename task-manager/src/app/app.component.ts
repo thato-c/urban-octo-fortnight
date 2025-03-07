@@ -18,7 +18,20 @@ export class AppComponent {
     {id: 3, title: 'Refactor Code', description: 'Improve code organization and reusability', completed: false},
   ];
 
+  taskToEdit: Task | null = null;
+
   addTask(task: Task): void{
     this.tasks.push(task)
+  }
+
+  updateTask(updatedTask: Task){
+    const index = this.tasks.findIndex(task => task.id === updatedTask.id);
+    if (index !== -1){
+      this.tasks[index] = updatedTask;
+    }
+  }
+
+  editTask(task: Task){
+    this.taskToEdit = { ...task };
   }
 }

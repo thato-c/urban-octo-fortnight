@@ -1,2 +1,9 @@
-<app-task-form (taskCreated)="addTask($event)"></app-task-form>
-<app-task-list [tasks]="tasks"></app-task-list>
+<app-task-form 
+    [taskToEdit]="taskToEdit"
+    (taskCreated)="addTask($event)"
+    (taskUpdated)="updateTask($event)">
+</app-task-form>
+<app-task-list 
+    [tasks]="tasks"
+    (editTask)="editTask($event)">
+</app-task-list>
