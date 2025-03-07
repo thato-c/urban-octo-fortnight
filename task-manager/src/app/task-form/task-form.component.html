@@ -1,0 +1,14 @@
+<div class="task-form">
+    <h2>Create New Task</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="title">Title</label>
+            <input id="title" formControlName="title" placeholder="Task title">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input id="description" formControlName="description" placeholder="Task description">
+        </div>
+        <button type="submit">Create Task</button>
+    </form>
+</div>
