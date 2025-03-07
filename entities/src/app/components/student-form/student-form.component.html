@@ -1,0 +1,20 @@
+<div class="student-form">
+    <h2>Create New Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" formControlName="firstName" placeholder="Student First Name">
+            <div *ngIf="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched">
+                <small>First Name is required (min 2 characters)</small>
+            </div>
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input id="lastName" formControlName="lastName" placeholder="Student Last Name">
+            <div *ngIf="studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched">
+                <small>Last Name is required (min 2 characters)</small>
+            </div>
+        </div>
+        <button type="submit">Create Student</button>
+    </form>
+</div>
