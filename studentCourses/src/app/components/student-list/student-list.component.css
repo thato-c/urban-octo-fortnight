@@ -1,18 +1,64 @@
 table{
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Removes space between table cells */
 }
 
 th, td{
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
+    padding: 10px; /* Adds space inside each cell */
+    text-align: left; /* Aligns text to the left */
+    border: 1px solid #ddd; /* Adds a light border to the table cells */
 }
 
 thead{
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Lighter background for the border */
 }
 
 tr:hover{
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Changes backgrounf color on hover */
+}
+
+tbody tr:nth-child(odd){
+    background-color: #f9f9f9; /* Applies background color to odd rows */
+}
+
+tbody tr:nth-child(even){
+    background-color: #ffffff; /* Applies background color to even rows */
+}
+
+table{
+    border: 2px solid #333; /* Darker border aroundd the whole table */
+}
+
+th, td{
+    border: 1px solid #ddd; /* Inner borders between cells */
+}
+
+tbody td{
+    border: none; /* No border between rows */
+}
+
+th{
+    background-color: #4CAF50; /* Green background for header */
+    color: white; /* White text color */
+    font-weight: bold; /* Make header text bold */
+}
+
+td{
+    padding: 15px; /* Adds more padding inside table cells */
+}
+
+table{
+    margin-top: 20px; /* Adds space above the table */
+    margin-bottom: 20px; /* Adds space below the table */
+}
+
+table{
+    margin: 0 auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Ensures that table borders collapse */
+}
+
+caption{
+    font-family: 1.5em; /* Larger font size for the caption */
+    text-align: center; /* Centers the caaption */
+    margin-bottom: 10px; /* Adds some space below the caption */
 }
