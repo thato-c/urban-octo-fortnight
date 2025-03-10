@@ -5,7 +5,25 @@
     <ul>
         <li *ngFor="let student of students">
             <h3>{{ student.firstName }} {{ student.lastName }}</h3>
+            <button (click)="editStudent(student)">Edit</button>
             <button (click)="deleteStudent(student.id)">Delete</button>
         </li>
     </ul>
+</div>
+
+<div *ngIf="selectedStudent">
+    <h3>Edit Student</h3>
+    <form formGroup="selectedStudentForm">
+        <div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" formControl="firstName" placeholder="Student First Name">
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input id="lastName" formControl="lastName" placeholder="Student Last Name">
+        </div>
+        <button (click)="updateStudent()">Update</button>
+        <button (click)="cancelEdit()">Cancel</button>
+    </form>
+
 </div>
